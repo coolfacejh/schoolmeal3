@@ -1,0 +1,6 @@
+{
+  "name": "급식 조회 및 AI 한줄평",
+  "description": "선택한 날짜의 나이스(NEIS) 급식 메뉴를 조회하고, Gemini API를 통해 재미있는 한줄평을 생성하는 서비스입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,6 +1,5 @@
 import express from "express";
 import path from "path";
-import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 
 let aiClient: any = null;
@@ -151,6 +150,7 @@ app.post("/api/meal/review", async (req, res) => {
 // Serve static assets or mount Vite middleware in standalone non-Vercel environment
 async function setupHosting() {
   if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",

@@ -264,11 +264,7 @@ export default function App() {
       {/* School Setup Search Modal */}
       <SchoolSearchModal
         isOpen={isSearchModalOpen}
-        onClose={() => {
-          if (selectedSchool) {
-            setIsSearchModalOpen(false);
-          }
-        }}
+        onClose={() => setIsSearchModalOpen(false)}
         onSelect={handleSelectSchool}
       />
     </div>
